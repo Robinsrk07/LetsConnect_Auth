@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: letsconnect-auth # Name of the deployment
+  labels:
+    app: letsconnect-auth # Label for the deployment
+spec:
+  replicas: 3 # Number of replicas (pods) to run
+  selector:
+    matchLabels:
+      app: letsconnect-auth # Selector to match pods
+  template:
+    metadata:
+      labels:
+        app: letsconnect-auth # Labels for the pods
+    spec:
+      containers:
+        - name: letsconnect-auth # Name of the container
+          image: robinsrk07/letsconnect_auth:latest # Docker image to use
+          ports:
+            - containerPort: 3000 # Port exposed by the container
+          env:
+            - name: NODE_ENV
+              value: "production" # Environment variable
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "250m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
