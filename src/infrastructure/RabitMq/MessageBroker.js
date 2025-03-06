@@ -9,7 +9,7 @@ class MessageBroker extends IMessageBroker {
     }
 
     async connect() {
-        this.connection = await amqp.connect('amqp://localhost');
+        this.connection = await amqp.connect('amqp://admin:password@rabbitmq');
         this.channel = await this.connection.createChannel();
     }
 
