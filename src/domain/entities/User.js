@@ -34,6 +34,7 @@ class User {
         console.log("hello")
         console.log("wen")
         console.log("wen")
+        console.log("wen")
     }
     validate() {
         if (!this.name) {
