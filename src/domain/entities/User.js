@@ -29,7 +29,10 @@ class User {
     generateJWT() {
         return jwt.sign({ _id: this._id }, 'ROBIN@123', { expiresIn: '1d' });
     }
-
+    
+    async test(){
+        console.log("hello")
+    }
     validate() {
         if (!this.name) {
             throw new Error('Name is not valid');
