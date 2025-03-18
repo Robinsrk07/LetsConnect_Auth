@@ -33,6 +33,7 @@ class User {
     async test(){
         console.log("hello")
         console.log("wen")
+        console.log("wen")
     }
     validate() {
         if (!this.name) {
