@@ -1,0 +1,90 @@
+[33mcommit a3925ac0ca7a9886b05dfcd48303dff11d64ae06[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Robinsrk07 <robinsyriak07@gmail.com>
+Date:   Tue Mar 18 13:15:08 2025 +0530
+
+    Fresh commit after reset
+
+[33mcommit 2bf105ab6312b1c78406414ba8459455a75ceb27[m
+Author: Robinsrk07 <robinsyriak07@gmail.com>
+Date:   Tue Mar 18 12:40:50 2025 +0530
+
+    jenkins debug
+
+[33mcommit ead0d096173af298c2f0f21e452d6f9470cdc88c[m
+Author: Robinsrk07 <robinsyriak07@gmail.com>
+Date:   Tue Mar 18 12:38:00 2025 +0530
+
+    debug jenkins
+
+[33mcommit 2e5934ccd8e32cd3b3efbad98f140a72a226ca64[m
+Author: Robinsrk07 <robinsyriak07@gmail.com>
+Date:   Tue Mar 18 12:35:27 2025 +0530
+
+    jenkins
+
+[33mcommit d7cafc8b861861c37c38368f81ac2dea8f52b567[m
+Author: Robinsrk07 <robinsyriak07@gmail.com>
+Date:   Tue Mar 18 12:26:14 2025 +0530
+
+    jenkins
+
+[33mcommit fb5320b4fc85907043c290299d8fdc47ea46782a[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Robinsrk07 <robinsyriak07@gmail.com>
+Date:   Fri Mar 7 09:46:14 2025 +0530
+
+    updation
+
+[33mcommit 9d3e2cafa44890e9840010e0ed39e830c37a2839[m
+Author: Robinsrk07 <robinsyriak07@gmail.com>
+Date:   Fri Mar 7 01:29:53 2025 +0530
+
+    dockerfile fixed
+
+[33mcommit 64aa11d2a9a4f760490c571b54b831e7945ec202[m
+Author: Robinsrk07 <robinsyriak07@gmail.com>
+Date:   Thu Mar 6 23:45:40 2025 +0530
+
+    updated grpc rabitmq
+
+[33mcommit c9d6558a99378d4aa06fce44a14882146b356d5d[m
+Author: Robinsrk07 <148944086+Robinsrk07@users.noreply.github.com>
+Date:   Thu Mar 6 16:11:30 2025 +0530
+
+    Rename jenkinsfile to Jenkinsfile
+
+[33mcommit 76fcdcc70a6c8cd62d9c973a9a2272a6cb70eff8[m
+Merge: 921982a ba5fee2
+Author: Robinsrk07 <robinsyriak07@gmail.com>
+Date:   Thu Mar 6 16:07:04 2025 +0530
+
+    Merge branch 'master' of https://github.com/Robinsrk07/LetsConnect_Auth
+
+[33mcommit 921982a858d32a3a5f1cf8eccb762b75e5a1f227[m
+Author: Robinsrk07 <robinsyriak07@gmail.com>
+Date:   Thu Mar 6 16:07:01 2025 +0530
+
+    k8 & jenkinsfile
+
+[33mcommit ba5fee22c570d57a7562d9ee40f3800c4185cccf[m
+Author: Robinsrk07 <148944086+Robinsrk07@users.noreply.github.com>
+Date:   Thu Mar 6 14:29:11 2025 +0530
+
+    Rename Dockerfile.auth to Dockerfile
+
+[33mcommit 4454044d4fa443361666afd86202b105f236e661[m
+Author: Robinsrk07 <robinsyriak07@gmail.com>
+Date:   Wed Mar 5 20:12:22 2025 +0530
+
+    docker updated
+
+[33mcommit ba5f28eacb17ec8e2c140e01296919da793797e0[m
+Author: Robinsrk07 <robinsyriak07@gmail.com>
+Date:   Wed Mar 5 19:00:29 2025 +0530
+
+    Update .gitignore to ignore .env
+
+[33mcommit dc536c0d426c015189e495c3dfadd80c7ac0be9a[m
+Author: Robinsrk07 <robinsyriak07@gmail.com>
+Date:   Wed Mar 5 18:59:40 2025 +0530
+
+    Initial commit after reset
