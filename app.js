@@ -2,11 +2,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const multer = require('multer');
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
 const { NotFoundError, ValidationError, AuthenticationError } = require('./src/application/errors/customError');
 
 const app = express();
 app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
-app.use(express.json());
+app.use(express.json({ limit: "10mb" }));
+app.use(express.urlencoded({ limit: "10mb", extended: true }));
 app.use(cookieParser());
 
 const{authController,updatePassword,updateUser,IspremiumUpdate}=require("./container")
@@ -27,7 +31,7 @@ const server = new GRPCServer(authHandler);
 
 server.start(50051);
 
-app.post('/auth/signup', (req, res, next) => authController.signUp(req, res, next));
+app.post('/auth/signup',upload.array("photos", 5),(req, res, next) => authController.signUp(req, res, next));
 app.post('/auth/login', (req, res, next) => authController.login(req, res, next));
 app.post('/auth/logout', (req, res, next) => authController.logout(req, res, next));
 app.post('/auth/send-otp', (req, res, next) => authController.SendOtp(req, res, next));

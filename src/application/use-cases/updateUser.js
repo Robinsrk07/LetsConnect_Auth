@@ -12,31 +12,29 @@ class updateUser{
 
 
         console.log("Received user data:", user.data.savedUser);
-      console.log("userId:", userId);
       const {
-        firstName,
-        lastName,
-        emailId,
+        name,
         photoUrl,
-        skills,
-        age,
+        pincode,
+        town,
+        dob,
         about,
-        gender,
-        password,
+        gender
       } = user.data.savedUser;
 
       const updateData = {
-        firstName,
-        lastName,
-        emailId,
+        name,
         photoUrl,
-        skills,
-        age,
+        pincode,
+        town,
+        dob,
         about,
-        gender,
-        password,
+        gender
       };
-        await this.userRepository.updateUser(updateData,ownUser._id)
+       const updated_User = await this.userRepository.updateUser(updateData,ownUser._id)
+
+       console.log("updated_User",updated_User);
+       
     }
 }
 

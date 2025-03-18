@@ -8,15 +8,15 @@ class SignUpValidator {
     }
 
     validateName() {
-        const { firstName, lastName } = this.data;
-        if (!firstName || !lastName) {
+        const { name} = this.data;
+        if (!name) {
             throw new ValidationError("Name is not valid");
         }
     }
 
     validateEmail() {
-        const { emailId } = this.data;
-        if (!validator.isEmail(emailId)) {
+        const { email} = this.data;
+        if (!validator.isEmail(email)) {
             throw new ValidationError("Enter a valid email");
         }
     }

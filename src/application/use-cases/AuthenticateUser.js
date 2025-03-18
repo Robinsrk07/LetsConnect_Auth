@@ -16,7 +16,7 @@ class AuthenticateUser extends IAuthUseCase {
 
         try {
             const decoded = jwt.verify(token, "ROBIN@123");
-            console.log(decoded);
+            console.log('DECODE',decoded);
             
 
             return {

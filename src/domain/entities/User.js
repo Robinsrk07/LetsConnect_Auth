@@ -3,20 +3,20 @@ const jwt = require('jsonwebtoken');
 const validator = require('validator');
 
 class User {
-    constructor({ firstName, lastName, emailId, password, photoUrl, skills, age, about, gender,_id,isPremium,memberShipType }) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.emailId = emailId;
+    constructor({ name, email, password, photoUrl, about, gender, isPremium, memberShipType, town, pincode, dob,_id }) {
+        this.name = name;
+        this.emailId = email;
         this.password = password;
-        this.photoUrl = photoUrl;
-        this.skills = skills;
-        this.age = age;
+        this.photoUrl = photoUrl || []; // Ensure photoUrl is an array
         this.about = about;
         this.gender = gender;
-        this._id = _id; 
-        this.isPremium=isPremium;
-        this.memberShipType=memberShipType
-    } 
+        this.town = town;
+        this.pincode = pincode;
+        this.dob = dob;
+        this.isPremium = isPremium;
+        this.memberShipType = memberShipType;
+        this._id =_id
+    }
 
     async hashPassword() {
         this.password = await bcrypt.hash(this.password, 10);
@@ -31,7 +31,7 @@ class User {
     }
 
     validate() {
-        if (!this.firstName || !this.lastName) {
+        if (!this.name) {
             throw new Error('Name is not valid');
         }
         if (!validator.isEmail(this.emailId)) {
@@ -42,10 +42,9 @@ class User {
         }
     }
 
-
     static fromDatabase(userData) {
         return new User(userData);
     }
 }
-  
+
 module.exports = User;

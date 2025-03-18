@@ -12,9 +12,10 @@ const  Emailservice= require("./src/infrastructure/email/EmailService")
 const MessageBroker = require("./src/infrastructure/RabitMq/MessageBroker");
 const GenericConsumer = require("./src/infrastructure/RabitMq/consumer")
 const UserPaymentUpdate = require("./src/application/use-cases/userUpdate_Payment")
+const ImageUploadService = require("./src/application/services/ImageUploadService")
 
 //const UpdatePasswordUseCase = require("./src/application/use-cases/updatePasswordCase")
-
+const imageUploadService= new ImageUploadService()
 const userRepository = new UserRepository()
 const emailservice= new Emailservice()
 const messageBroker = new MessageBroker()
@@ -30,7 +31,7 @@ const IspremiumUpdate = new GenericConsumer("IsPremiumUpdate","IspremiumUpdateAu
 
 const otpService = new OTPService(emailservice)
 
-const signUpUseCase = new SignUpUseCase(userRepository,messageBroker)
+const signUpUseCase = new SignUpUseCase(userRepository,messageBroker,imageUploadService)
 const loginUseCase = new LoginUseCase(userRepository)
 const sendOtpCase = new SendOtpCase(otpService)
 const verifyOtp = new VerifyOtp(otpService)

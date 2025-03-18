@@ -8,7 +8,9 @@ class AuthController {
 
     async signUp(req, res, next) {
         try {
-            const user= await this.signUpUseCase.execute(req.body);
+           
+            
+            const user= await this.signUpUseCase.execute(req.body,req.files);
            // res.cookie('token', token, { expires: new Date(Date.now() + 24 * 60 * 60 * 1000) });
             res.json({ message: 'User added successfully', data: user });
         } catch (err) {
@@ -18,6 +20,8 @@ class AuthController {
 
     async login(req, res, next) {
         try {
+
+            console.log(req.body)
             const { emailId, password } = req.body;
             const { user, token } = await this.loginUseCase.execute(emailId, password);
             res.cookie('token', token, { expires: new Date(Date.now() + 24 * 60 * 60 * 1000) });
